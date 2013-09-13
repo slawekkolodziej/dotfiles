@@ -1,0 +1,7 @@
+# tmp & cache files
+.DS_Store
+*.sass-cache
+
+# editors
+*.sublime-project
+*.sublime-workspace
