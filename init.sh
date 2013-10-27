@@ -7,16 +7,16 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo "Install homebrew and its packages"
-./scripts/brew.sh
+source ./scripts/brew.sh
 
 echo "Install ruby versions"
-./scripts/rubies.sh
+source ./scripts/rubies.sh
 
 echo "Check OSX apps"
-./scripts/check.sh
+source ./scripts/check.sh
 
 echo "Set system defaults"
-./scripts/osx.sh
+source ./scripts/osx.sh
 
 echo "Symlink dotfiles"
-./scripts/symlink.sh
+source ./scripts/symlink.sh
