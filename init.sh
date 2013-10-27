@@ -21,8 +21,9 @@ source ./scripts/osx.sh
 printf "\nSymlink dotfiles\n"
 source ./scripts/symlink.sh
 
-printf "\n\n---\n"&&
+printf "\n\n---"
 read -p "Everything's done, reboot now? [y/n] " -n 1
+echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   sudo reboot
 fi
