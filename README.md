@@ -2,6 +2,10 @@
 
 My dotfiles bundle
 
+## Requirements
+
+* XCode with command line tools
+
 
 ## Installation
 
