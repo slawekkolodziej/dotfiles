@@ -6,17 +6,23 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-echo "Install homebrew and its packages"
+printf "\nInstall homebrew and its packages\n"
 source ./scripts/brew.sh
 
-echo "Install ruby versions"
+printf "\nInstall ruby versions\n"
 source ./scripts/rubies.sh
 
-echo "Check OSX apps"
+printf "\nCheck OSX apps\n"
 source ./scripts/check.sh
 
-echo "Set system defaults"
+printf "\nSet system defaults\n"
 source ./scripts/osx.sh
 
-echo "Symlink dotfiles"
+printf "\nSymlink dotfiles\n"
 source ./scripts/symlink.sh
+
+printf "\n\n---\n"&&
+read -p "Everything's done, reboot now? [y/n] " -n 1
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+  sudo reboot
+fi
