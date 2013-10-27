@@ -5,13 +5,41 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
 brew update
 brew upgrade
+
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
+
+# libs
+brew install autoconf
+brew install pkg-config
+brew install freetype
+brew install libtool
+brew install pcre
+
+# version control
+brew install git
+brew install mercurial
+
+# images
+brew install imagemagick
+brew install libpng
+brew install jpeg
+brew install pngnq
+brew install pngquant
+
+# ruby versioning
+brew install rbenv
+brew install ruby-build
+
+# webserver, db, cache, etc
+brew install nginx
+brew install mysql
+brew install redis
+
+# dev envs
+brew install go
+brew install node
 brew tap josegonzalez/homebrew-php
-
-brew install autoconf git imagemagick libpng mercurial nginx pcre pngnq rbenv ruby-build \
-             freetype go jpeg libtool mysql node pkg-config pngquant redis
-
 brew install php54 --with-fpm  --with-imap  --without-apache --with-debug
 
 brew cleanup
