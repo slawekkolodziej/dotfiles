@@ -262,6 +262,9 @@ defaults write com.apple.dock mru-spaces -bool false
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
+# Move dock to the left side
+defaults write com.apple.dock orientation -string "left"
+
 # Reset Launchpad
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 
