@@ -275,15 +275,5 @@ ln -s /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app /Appli
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 160 "{enabled = 0; value = { parameters = (65535, 131, 0); type = 'standard'; }; }"
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 62 "{enabled = 1; value = { parameters = (65535, 131, 0); type = 'standard'; }; }"
 
-# Set Illustrator default language
+# Set Illustrator default language, probably this has to be run after installing illustrator
 defaults write com.adobe.Illustrator AppleLanguages '("pl-PL")'
-
-# Other apps:
-# Chrome https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
-# Skype http://www.skype.com/go/getskype-macosx.dmg
-# Sublime Text 2
-# SourceTree
-# Spotify
-# Firefox
-# iTerm2
-# BitTorrent Sync
