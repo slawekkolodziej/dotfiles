@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ###############################################################################
-# General UI/UX                                                               #
+# General UI/UX
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
@@ -85,7 +85,7 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 
 ###############################################################################
-# Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input
 ###############################################################################
 
 # Zoom keyboard shortcut using ⌃⌘Z
@@ -145,8 +145,19 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Stop iTunes from responding to the keyboard media keys
 launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 
+# Disable capslock key
+vendorId=`ioreg -n IOHIDKeyboard -r | sed -n 's/.*"VendorID" = \([0-9]*\)/\1/p'`
+productId=`ioreg -n IOHIDKeyboard -r | sed -n 's/.*"ProductID" = \([0-9]*\)/\1/p'`
+defaults -currentHost write NSGlobalDomain com.apple.keyboard.modifiermapping.$vendorId-$productId-0 -array \
+  '<dict><key>HIDKeyboardModifierMappingDst</key><integer>-1</integer><key>HIDKeyboardModifierMappingSrc</key><integer>1</integer></dict>'
+
+# Set F4 key back to Dashboard instead of Launchpad
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 160 "{enabled = 0; value = { parameters = (65535, 131, 0); type = 'standard'; }; }"
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 62 "{enabled = 1; value = { parameters = (65535, 131, 0); type = 'standard'; }; }"
+
+
 ###############################################################################
-# Screen                                                                      #
+# Screen
 ###############################################################################
 
 # Require password immediately after sleep or screen saver begins
@@ -169,7 +180,7 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 2
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
 ###############################################################################
-# Finder                                                                      #
+# Finder
 ###############################################################################
 
 # Finder: disable window animations and Get Info animations
@@ -185,7 +196,7 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write NSGlobalDomain AppleShowAllExtensions -bool false
 
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -209,9 +220,9 @@ defaults write NSGlobalDomain com.apple.springing.delay -float 0
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Show item info near icons on the desktop and in other icon views
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
-/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo false" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:showItemInfo false" ~/Library/Preferences/com.apple.finder.plist
+/usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:showItemInfo false" ~/Library/Preferences/com.apple.finder.plist
 
 # Show item info to the right of the icons on the desktop
 /usr/libexec/PlistBuddy -c "Set DesktopViewSettings:IconViewSettings:labelOnBottom false" ~/Library/Preferences/com.apple.finder.plist
@@ -226,7 +237,7 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 chflags nohidden ~/Library
 
 ###############################################################################
-# Dock, Dashboard, and hot corners                                            #
+# Dock, Dashboard, and hot corners
 ###############################################################################
 
 # Enable highlight hover effect for the grid view of a stack (Dock)
@@ -271,9 +282,9 @@ find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 # Add iOS Simulator to Launchpad
 ln -s /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app /Applications/iOS\ Simulator.app
 
-# Set F4 key back to Dashboard instead of Launchpad
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 160 "{enabled = 0; value = { parameters = (65535, 131, 0); type = 'standard'; }; }"
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 62 "{enabled = 1; value = { parameters = (65535, 131, 0); type = 'standard'; }; }"
+###############################################################################
+# Other
+###############################################################################
 
 # Set Illustrator default language, probably this has to be run after installing illustrator
 defaults write com.adobe.Illustrator AppleLanguages '("pl-PL")'
