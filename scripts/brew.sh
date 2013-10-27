@@ -74,8 +74,8 @@ installcask sidestep
 
 # dev
 installcask iterm2
-installcask sublime-text
 installcask sublime-text-3
+installcask sublime-text
 installcask sourcetree
 
 # vm
