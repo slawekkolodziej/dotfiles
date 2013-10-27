@@ -149,7 +149,7 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
 vendorId=`ioreg -n IOHIDKeyboard -r | sed -n 's/.*"VendorID" = \([0-9]*\)/\1/p'`
 productId=`ioreg -n IOHIDKeyboard -r | sed -n 's/.*"ProductID" = \([0-9]*\)/\1/p'`
 defaults -currentHost write NSGlobalDomain com.apple.keyboard.modifiermapping.$vendorId-$productId-0 -array \
-  '<dict><key>HIDKeyboardModifierMappingDst</key><integer>-1</integer><key>HIDKeyboardModifierMappingSrc</key><integer>1</integer></dict>'
+  '<dict><key>HIDKeyboardModifierMappingDst</key><integer>-1</integer><key>HIDKeyboardModifierMappingSrc</key><integer>0</integer></dict>'
 
 # Set F4 key back to Dashboard instead of Launchpad
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 160 "{enabled = 0; value = { parameters = (65535, 131, 0); type = 'standard'; }; }"
