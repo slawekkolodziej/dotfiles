@@ -295,3 +295,6 @@ defaults write com.adobe.Illustrator AppleLanguages '("pl-PL")'
 
 # Set default terminal theme to Pro
 defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
+
+# Set default desktop background
+defaults write com.apple.desktop Background '{default = {ImageFilePath = "/Library/Desktop Pictures/Solid Colors/Solid Aqua Dark Blue.png"; };}'
