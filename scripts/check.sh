@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install e-deklaracje
-curl -O http://www.e-deklaracje.gov.pl/files/dopobrania/e-dek/app/e-DeklaracjeDesktop.air && open ./e-DeklaracjeDesktop.air
+curl -o ~/Downloads/e-DeklaracjeDesktop.air http://www.e-deklaracje.gov.pl/files/dopobrania/e-dek/app/e-DeklaracjeDesktop.air && open ~/Downloads/e-DeklaracjeDesktop.air
 
 # Report whether various apps was found
 function check() {
