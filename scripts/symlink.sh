@@ -4,7 +4,7 @@ function symlink() {
     --exclude "scripts/" \
     --exclude ".DS_Store" \
     --exclude "init.sh" \
-    --exclude "README.md" -av --no-perms . ~/projects/dotfiles-test
+    --exclude "README.md" -av --no-perms . ~
   # source ~/.bash_profile
 }
 
