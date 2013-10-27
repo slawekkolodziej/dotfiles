@@ -292,3 +292,6 @@ defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server All
 
 # Set Illustrator default language, probably this has to be run after installing illustrator
 defaults write com.adobe.Illustrator AppleLanguages '("pl-PL")'
+
+# Set default terminal theme to Pro
+defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
