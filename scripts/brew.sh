@@ -50,8 +50,15 @@ brew tap phinze/homebrew-cask
 brew install brew-cask
 
 function installcask() {
-  if brew cask list | grep "^$1$" > /dev/null; then
-    echo "$1 is already installed."
+  if [ -f $1 ]; then
+    tmp=${1##*/};
+    cask=${tmp%.[^.]*}
+  else
+    cask=$1
+  fi
+
+  if brew cask list | grep "^$cask$" > /dev/null; then
+    echo "$cask is already installed."
   else
     brew cask install "$1"
   fi
@@ -71,6 +78,7 @@ installcask skype
 
 # network
 installcask sidestep
+installcask casks/junos-pulse.rb
 
 # dev
 installcask iterm2
