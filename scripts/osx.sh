@@ -307,7 +307,7 @@ defaults write com.apple.dock orientation -string "left"
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 
 # Add iOS Simulator to Launchpad
-ln -s ~/Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app /Applications/iOS\ Simulator.app
+ln -s /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app ~/Applications/iOS\ Simulator.app
 
 ###############################################################################
 # Other
