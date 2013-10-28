@@ -1,6 +1,6 @@
 # dotfiles
 
-My dotfiles bundle
+My dotfiles bundle and system provisioning scripts
 
 ## Requirements
 
