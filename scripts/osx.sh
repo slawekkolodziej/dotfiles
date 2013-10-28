@@ -152,8 +152,16 @@ defaults -currentHost write NSGlobalDomain com.apple.keyboard.modifiermapping.$v
   '<dict><key>HIDKeyboardModifierMappingDst</key><integer>-1</integer><key>HIDKeyboardModifierMappingSrc</key><integer>0</integer></dict>'
 
 # Set F4 key back to Dashboard instead of Launchpad
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 160 "{enabled = 0; value = { parameters = (65535, 131, 0); type = 'standard'; }; }"
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 62 "{enabled = 1; value = { parameters = (65535, 131, 0); type = 'standard'; }; }"
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:160:enabled false" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:160:value:parameters:0 65535" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:160:value:parameters:2 0" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:160:value:parameters:1 131" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:62:enabled true" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:62:value:parameters:0 65535" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:62:value:parameters:1 131" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:62:value:parameters:2 0" ~/Library/Preferences/com.apple.symbolichotkeys.plist
+
 
 
 ###############################################################################
