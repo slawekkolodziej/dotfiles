@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# download & install e-deklaracje
-curl -o ~/Downloads/edeklaracje.air http://www.e-deklaracje.gov.pl/files/dopobrania/e-dek/app/e-DeklaracjeDesktop.air
-sudo open ~/Downloads/edeklaracje.air
-
 # Report whether various apps was found
 function check() {
   APPNAME=`basename "/Applications/$1"`
