@@ -3,7 +3,7 @@
 # Ruby versions
 function installRuby() {
   if [ -d "$HOME/.rbenv/versions/$1" ]; then
-    echo -e "\033[32m* Ruby $1 is already installed\033\033[39m"
+    echo -e "\033[32m* Ruby $1 is already installed\033[39m"
   else
     rbenv install $1
   fi

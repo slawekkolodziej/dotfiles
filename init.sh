@@ -22,7 +22,7 @@ printf "\nSymlink dotfiles\n"
 source ./scripts/symlink.sh
 
 printf "\n\n---\n"
-read -p "Everything's done, reboot now? [y/n] " -n 1
+read -p "Everything's done, reboot now? (y/n) " -n 1
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   sudo reboot
