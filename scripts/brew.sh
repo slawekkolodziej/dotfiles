@@ -50,10 +50,10 @@ brew tap phinze/homebrew-cask
 brew install brew-cask
 
 function installcask() {
-  if brew cask info "${@}" | grep "Not installed" > /dev/null; then
-    brew cask install "${@}"
+  if brew cask list | grep "^$1$" > /dev/null; then
+    echo "$1 is already installed."
   else
-    echo "${@} is already installed."
+    brew cask install "$1"
   fi
 }
 
