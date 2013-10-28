@@ -1,0 +1,6 @@
+[submodule "apps/sublime3/Packages/SublimeLinter"]
+	path = apps/sublime3/Packages/SublimeLinter
+	url = git@github.com:SublimeLinter/SublimeLinter.git
+[submodule "apps/sublime3/Packages/GoSublime"]
+	path = apps/sublime3/Packages/GoSublime
+	url = git@github.com:DisposaBoy/GoSublime.git
