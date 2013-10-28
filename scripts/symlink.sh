@@ -14,7 +14,7 @@ function symlink() {
 }
 
 function symlink_all() {
-  git submodule install
+  git submodule update --init
   symlink . ~
   symlink ./apps/sublime3/ ~/Library/Application\ Support/Sublime\ Text\ 3/
 }
