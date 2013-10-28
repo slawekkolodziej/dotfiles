@@ -327,3 +327,5 @@ defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 # Set default desktop background
 defaults write com.apple.desktop Background '{default = {ImageFilePath = "/Library/Desktop Pictures/Solid Colors/Solid Aqua Dark Blue.png"; };}'
 
+# Install SourceCodePro font
+curl -o ~/Downloads/sourcecodepro.zip http://www.google.com/fonts/download?kit=5CnRSlG29fo96WRM6evqx3XmVIqD4Rma_X5NukQ7EX0 && tar xfz ~/Downloads/sourcecodepro.zip -C ~/Library/Fonts/
