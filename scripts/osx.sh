@@ -314,8 +314,7 @@ ln -s /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app ~/Appl
 ###############################################################################
 
 # Disable guest access
-defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
-defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist GuestEnabled 0
 
 # Set Illustrator default language, probably this has to be run after installing illustrator
 defaults write com.adobe.Illustrator AppleLanguages '("pl-PL")'
