@@ -11,7 +11,7 @@ export GOPATH=$HOME/.golang
 
 
 # sublime shortcut
-sublime () { /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl $@; }
+sublime () { ~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $@; }
 
 # aliases
 alias cd..="cd .."
