@@ -52,9 +52,10 @@ installcask opera
 installcask opera-next
 installcask tor-browser
 
-# communication
+# communication & collaboration
 installcask skype
 installcask hangouts
+installcask team-viewer
 
 # network
 installcask sidestep
