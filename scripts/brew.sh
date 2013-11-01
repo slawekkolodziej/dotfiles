@@ -9,38 +9,17 @@ brew upgrade
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
-# libs
-brew install autoconf
-brew install pkg-config
-brew install freetype
-brew install libtool
-brew install pcre
-
 # version control
 brew install git
 brew install mercurial
 
 # images
-brew install imagemagick
-brew install libpng
-brew install jpeg
 brew install pngnq
 brew install pngquant
 
 # ruby versioning
 brew install rbenv
 brew install ruby-build
-
-# webserver, db, cache, etc
-brew install nginx
-brew install mysql
-brew install redis
-
-# dev envs
-brew install go
-brew install node
-brew tap josegonzalez/homebrew-php
-brew install php54 --with-fpm  --with-imap  --without-apache --with-debug
 
 brew cleanup
 
@@ -89,6 +68,7 @@ installcask sourcetree
 # vm
 installcask vmware-fusion
 installcask virtualbox
+installcask vagrant
 
 # gaphic, movie & text editors
 installcask mou
