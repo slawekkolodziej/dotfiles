@@ -54,6 +54,7 @@ installcask tor-browser
 
 # communication
 installcask skype
+installcask hangouts
 
 # network
 installcask sidestep
