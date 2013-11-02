@@ -59,7 +59,7 @@ installcask team-viewer
 
 # network
 installcask sidestep
-installcask casks/junos-pulse.rb
+installcask casks/network-connect.rb
 
 # dev
 installcask iterm2
