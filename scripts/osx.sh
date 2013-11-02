@@ -302,6 +302,9 @@ defaults write com.apple.dock showhidden -bool true
 # Move dock to the left side
 defaults write com.apple.dock orientation -string "left"
 
+# Minimize windows into application icon
+defaults write com.apple.dock minimize-to-application -bool true
+
 # Reset Launchpad
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
 
