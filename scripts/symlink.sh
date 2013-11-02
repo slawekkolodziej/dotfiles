@@ -4,6 +4,7 @@ function symlink() {
   rsync \
     --exclude ".git/" \
     --exclude ".gitmodules" \
+    --exclude ".gitignore" \
     --exclude ".DS_Store" \
     --exclude "apps/" \
     --exclude "casks/" \

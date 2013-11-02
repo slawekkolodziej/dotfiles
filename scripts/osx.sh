@@ -278,10 +278,11 @@ defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 # Show indicator lights for open applications in the Dock
 defaults write com.apple.dock show-process-indicators -bool true
 
-# Wipe all (default) app icons from the Dock
-# This is only really useful when setting up a new Mac, or if you don’t use
-# the Dock to launch apps.
-# defaults write com.apple.dock persistent-apps -array
+# Wipe all (default) app icons from the Dock and lock next calls
+if [ ! -f "./flags/wipe-dock-icons" ]; then
+    defaults write com.apple.dock persistent-apps -array
+    touch "./flags/wipe-dock-icons"
+fi
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
