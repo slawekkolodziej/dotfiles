@@ -64,7 +64,6 @@ installcask casks/network-connect.rb
 # dev
 installcask iterm2
 installcask sublime-text-3
-installcask sublime-text
 installcask sourcetree
 
 # vm
