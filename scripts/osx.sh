@@ -328,7 +328,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 ###############################################################################
 
 # Disable guest access
-sudo defaults write /Library/Preferences/com.apple.loginwindow.plist GuestEnabled 0
+sudo defaults write /Library/Preferences/com.apple.loginwindow.plist GuestEnabled -bool false
 
 # Set Illustrator default language, probably this has to be run after installing illustrator
 defaults write com.adobe.Illustrator AppleLanguages '("pl-PL")'
