@@ -6,6 +6,10 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Keep computer awake
+pmset noidle &
+PMSETPID=$!
+
 printf "\nInstall homebrew and its packages\n"
 source ./scripts/brew.sh
 
@@ -24,6 +28,10 @@ source ./scripts/symlink.sh
 printf "\n\n---\n"
 read -p "Everything's done, reboot now? (y/n) " -n 1
 echo
+
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   sudo reboot
 fi
+
+# You can go to sleep now
+kill $PMSETPID
