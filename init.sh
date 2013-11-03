@@ -10,6 +10,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 pmset noidle &
 PMSETPID=$!
 
+printf "\nInitialize submodules\n"
+git submodule update --init
+
 printf "\nInstall homebrew and its packages\n"
 source ./scripts/brew.sh
 
