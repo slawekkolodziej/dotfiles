@@ -15,11 +15,8 @@ sublime () { ~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $@
 
 # aliases
 alias cd..="cd .."
-alias ..="cd .."
 alias la="ls -la"
 
-alias homesick="~/.homesick/repos/homeshick/home/.homeshick"
-alias r="rails"
 alias be="bundle exec"
 alias sl="sublime"
 alias sl.="sublime ."
