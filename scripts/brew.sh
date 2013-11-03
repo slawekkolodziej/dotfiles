@@ -57,9 +57,10 @@ installcask skype
 installcask hangouts
 installcask team-viewer
 
-# network
+# network & security
 installcask sidestep
 installcask casks/network-connect.rb
+installcask true-crypt
 
 # dev
 installcask iterm2

@@ -18,25 +18,27 @@ check "Firefox.app"
 check "FirefoxAurora.app"
 check "Opera.app"
 check "Opera Next.app"
+check "TorBrowser_en-US.app"
 
 # communication
 check "Skype.app"
+check "TeamViewer 8/TeamViewer.app"
 
 # network
-check "Junos Pulse.app"
 check "Sidestep.app"
+check "Network Connect.app"
+check "TrueCrypt.app"
 
 # dev
 check "iTerm.app"
-check "Sublime Text.app"
 check "Sublime Text 2.app"
 check "SourceTree.app"
 check "metasploit"
-check "xCode.app"
 
 # vm
 check "VMware Fusion.app"
 check "VirtualBox.app"
+check "Vagrant"
 
 # gaphic, movie & text editors
 check "Mou.app"
@@ -47,8 +49,8 @@ check "Adobe Lightroom 3.app"
 
 # file sharing / backup / download
 check "Dropbox.app"
-check "uTorrent.app"
 check "BitTorrent Sync.app"
+check "uTorrent.app"
 
 # media players
 check "VLC.app"
