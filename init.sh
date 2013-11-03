@@ -29,9 +29,10 @@ printf "\n\n---\n"
 read -p "Everything's done, reboot now? (y/n) " -n 1
 echo
 
+# You can go to sleep now
+kill $PMSETPID
+
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   sudo reboot
 fi
 
-# You can go to sleep now
-kill $PMSETPID
