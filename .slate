@@ -10,6 +10,8 @@ bind l:ctrl;alt  push right bar-resize:screenSizeX/3
 bind h:ctrl;alt  push left  bar-resize:screenSizeX*2/3-10
 bind k:ctrl;alt  push up    bar-resize:screenSizeY/2-5
 bind j:ctrl;alt  push down  bar-resize:screenSizeY/2+5
+bind n:ctrl;alt  push up    bar-resize:screenSizeY/5*4
+bind m:ctrl;alt  push down  bar-resize:screenSizeY/4
 
 # Throw Bindings
 bind 1:ctrl;alt       throw 0 resize
