@@ -5,3 +5,7 @@
 # editors
 *.sublime-project
 *.sublime-workspace
+
+# app configs
+.vagrant
+
