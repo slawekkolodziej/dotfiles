@@ -4,11 +4,14 @@
 # General UI/UX
 ###############################################################################
 
+COMPUTER_NAME=$1
+: ${COMPUTER_NAME:="slawekk-air"}
+
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "slawekk-air"
-sudo scutil --set HostName "slawekk-air"
-sudo scutil --set LocalHostName "slawekk-air"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "slawekk-air"
+sudo scutil --set ComputerName $COMPUTER_NAME
+sudo scutil --set HostName $COMPUTER_NAME
+sudo scutil --set LocalHostName $COMPUTER_NAME
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $COMPUTER_NAME
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
@@ -239,9 +242,6 @@ defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-# Empty Trash securely by default
-defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
