@@ -104,8 +104,8 @@ defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerHorizSwipeGesture -int 1
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 1
 
-# Disable “natural” (Lion-style) scrolling
-#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+# Three fingers swipe down for per-app Expose gesture
+defaults write com.apple.dock showAppExposeGestureEnabled -bool YES
 
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
@@ -119,6 +119,8 @@ defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Follow the keyboard focus while zoomed in
 defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+# When zoomed in, move image continuously with pointer
+defaults write com.apple.universalaccess closeViewPanningMode -int 0
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
@@ -329,3 +331,11 @@ defaults write com.apple.desktop Background '{default = {ImageFilePath = "/Libra
 
 # Install SourceCodePro font
 curl -o ~/Downloads/sourcecodepro.zip http://www.google.com/fonts/download?kit=5CnRSlG29fo96WRM6evqx3XmVIqD4Rma_X5NukQ7EX0 && tar xfz ~/Downloads/sourcecodepro.zip -C ~/Library/Fonts/
+
+# Remove "About Downloads.pdf" from ~/Downloads
+rm -rf ~/Downloads/About\ Downloads.lpdf
+
+# Turn bluetooth off
+sudo defaults write /Library/Preferences/com.apple.Bluetooth.plist ControllerPowerState -int 0
+sudo launchctl unload /System/Library/LaunchDaemons/com.apple.blued.plist
+sudo launchctl load /System/Library/LaunchDaemons/com.apple.blued.plist
