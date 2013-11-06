@@ -1,7 +1,7 @@
 [submodule "apps/sublime3/Packages/GoSublime"]
 	path = apps/sublime3/Packages/GoSublime
-	url = git@github.com:DisposaBoy/GoSublime.git
+	url = https://github.com/DisposaBoy/GoSublime.git
 [submodule "apps/sublime3/Packages/SublimeLinter"]
 	path = apps/sublime3/Packages/SublimeLinter
-	url = git@github.com:kstrauser/SublimeLinter.git
+	url = https://github.com/kstrauser/SublimeLinter.git
 	branch = sublime-text-3

@@ -11,7 +11,7 @@ pmset noidle &
 PMSETPID=$!
 
 printf "\nInitialize submodules\n"
-git submodule update --init
+sudo git submodule update --init
 
 printf "\nInstall homebrew and its packages\n"
 source ./scripts/brew.sh
