@@ -90,3 +90,4 @@ installcask app-cleaner
 installcask keka
 installcask imageoptim
 installcask adobe-air
+installcask font-source-code-pro
