@@ -28,6 +28,11 @@ brew cleanup
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
+# tap casks for versions & fonts
+brew tap caskroom/versions
+brew tap caskroom/fonts
+
+
 function installcask() {
   if [ -f $1 ]; then
     tmp=${1##*/};
@@ -55,39 +60,46 @@ installcask tor-browser
 # communication & collaboration
 installcask skype
 installcask hangouts
-installcask team-viewer
+installcask teamviewer
 
 # network & security
 installcask sidestep
 installcask casks/network-connect.rb
-installcask true-crypt
+installcask truecrypt
 
 # dev
 installcask iterm2
 installcask sublime-text-3
 installcask sourcetree
+installcask p4merge
 
-# vm
-installcask vmware-fusion
+# virtualization
+installcask casks/vmware-fusion.rb
 installcask virtualbox
 installcask vagrant
 
-# gaphic, movie & text editors
+# text editors
 installcask mou
+installcask libreoffice
 
-# file sharing / backup / download
-installcask dropbox
+# file sharing
 installcask bit-torrent-sync
-installcask u-torrent
+installcask utorrent
 
 # media players
 installcask vlc
 installcask spotify
 
-# various
-installcask slate
-installcask app-cleaner
-installcask keka
+# graphic
 installcask imageoptim
+installcask casks/lightroom.rb
+
+# utilities
+installcask slate
+installcask appcleaner
+installcask keka
+installcask todoist
+
+# various
 installcask adobe-air
 installcask font-source-code-pro
