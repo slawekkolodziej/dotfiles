@@ -326,9 +326,6 @@ defaults write com.adobe.Illustrator AppleLanguages '("pl-PL")'
 defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
 defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 
-# Set default desktop background
-defaults write com.apple.desktop Background '{default = {ImageFilePath = "/Library/Desktop Pictures/Solid Colors/Solid Aqua Dark Blue.png"; };}'
-
 # Remove "About Downloads.pdf" from ~/Downloads
 rm -rf ~/Downloads/About\ Downloads.lpdf
 
