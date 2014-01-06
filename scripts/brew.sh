@@ -21,6 +21,10 @@ brew install pngquant
 brew install rbenv
 brew install ruby-build
 
+# nodejs
+brew install nodejs
+npm install -g jshint
+
 brew cleanup
 
 
