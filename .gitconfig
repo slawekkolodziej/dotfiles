@@ -6,7 +6,6 @@
 [github]
 	user = slawekkolodziej
 [core]
-	excludefile = ~/.gitignore_global
 	excludesfile = ~/.gitignore_global
 	editor = vim
 [alias]
@@ -22,3 +21,5 @@
 	trustExitCode = true
 [credential]
 	helper = cache
+[push]
+	default = simple
