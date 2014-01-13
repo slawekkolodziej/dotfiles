@@ -8,15 +8,17 @@
 eval "$(rbenv init -)"
 
 # define colors as words
-Color_Off='\e[00m'
-Black='\e[0;30m'  # Black
-Red='\e[0;31m'    # Red
-Green='\e[0;32m'  # Green
-Yellow='\e[0;33m' # Yellow
-Blue='\e[0;34m'   # Blue
-Purple='\e[0;35m' # Purple
-Cyan='\e[0;36m'   # Cyan
-White='\e[0;37m'  # White
+Color_Off="\e[00m"
+Black="\e[0;30m"  # Black
+Red="\e[0;31m"    # Red
+Green="\e[0;32m"  # Green
+Yellow="\e[0;33m" # Yellow
+Blue="\e[0;34m"   # Blue
+Purple="\e[0;35m" # Purple
+Cyan="\e[0;36m"   # Cyan
+White="\e[0;37m"  # White
+
+GIT_PS1_SHOWUPSTREAM="auto"
 
 # prompt format & terminal colors
 export PS1="$Yellow[\u@\h]$Green\$(__git_ps1) $Color_Off\w \n\$ "
