@@ -8,6 +8,7 @@ function symlink() {
     --exclude ".DS_Store" \
     --exclude "apps/" \
     --exclude "casks/" \
+    --exclude "flags/" \
     --exclude "scripts/" \
     --exclude "README.md" \
     --exclude "init.sh" \
