@@ -22,7 +22,7 @@ check "TorBrowser_en-US.app"
 
 # communication
 check "Skype.app"
-check "TeamViewer 8/TeamViewer.app"
+check "TeamViewer.app"
 
 # network
 check "Sidestep.app"
