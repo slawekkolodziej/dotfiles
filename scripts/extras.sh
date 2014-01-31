@@ -4,6 +4,7 @@ do
   echo "Install other stuff"
   echo "1) e-Deklaracje"
   echo "2) metasploit"
+  echo "3) Apache Cordova"
   echo
   echo "q) exit"
 
@@ -18,6 +19,10 @@ do
 
     2) echo "Installing metasploit"
       git clone git://github.com/rapid7/metasploit-framework ~/metasploit
+      ;;
+
+    3) echo "Installing Apache Cordova"
+      npm install -g cordova
       ;;
 
     q) exit 0
