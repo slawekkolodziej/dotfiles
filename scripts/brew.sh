@@ -23,7 +23,6 @@ brew install ruby-build
 
 # nodejs
 brew install nodejs
-npm install -g jshint
 
 brew cleanup
 

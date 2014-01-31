@@ -19,6 +19,9 @@ source ./scripts/brew.sh
 printf "\nInstall ruby versions\n"
 source ./scripts/rubies.sh
 
+printf "\nInstall node packages\n"
+source ./scripts/npm.sh
+
 printf "\nCheck OSX apps\n"
 source ./scripts/check.sh
 
