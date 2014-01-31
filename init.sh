@@ -13,23 +13,25 @@ PMSETPID=$!
 printf "\nInitialize submodules\n"
 sudo git submodule update --init
 
-printf "\nInstall homebrew and its packages\n"
-source ./scripts/brew.sh
+pushd ./scripts
+    printf "\nInstall homebrew and its packages\n"
+    . brew.sh
 
-printf "\nInstall ruby versions\n"
-source ./scripts/rubies.sh
+    printf "\nInstall ruby versions\n"
+    . rubies.sh
 
-printf "\nInstall node packages\n"
-source ./scripts/npm.sh
+    printf "\nInstall node packages\n"
+    . npm.sh
 
-printf "\nCheck OSX apps\n"
-source ./scripts/check.sh
+    printf "\nCheck OSX apps\n"
+    . check.sh
 
-printf "\nSet system defaults\n"
-source ./scripts/osx.sh
+    printf "\nSet system defaults\n"
+    . osx.sh
 
-printf "\nSymlink dotfiles\n"
-source ./scripts/symlink.sh
+    printf "\nSymlink dotfiles\n"
+    . symlink.sh
+popd
 
 printf "\n\n---\n"
 read -p "Everything's done, reboot now? (y/n) " -n 1
