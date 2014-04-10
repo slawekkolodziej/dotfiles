@@ -3,6 +3,8 @@ config nudgePercentOf screenSize
 config resizePercentOf screenSize
 
 # Push Bindings
+bind o:ctrl;alt  push right bar-resize:screenSizeX*2/3
+bind y:ctrl;alt  push left  bar-resize:screenSizeX/3
 bind l:ctrl;alt  push right bar-resize:screenSizeX/3
 bind h:ctrl;alt  push left  bar-resize:screenSizeX*2/3
 bind k:ctrl;alt  push up    bar-resize:screenSizeY/5*3
