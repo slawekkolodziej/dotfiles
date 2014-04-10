@@ -1,9 +1,6 @@
 # git autocomplete
 [ -f ~/.git-completion.sh ] && . ~/.git-completion.sh
 
-# git prompt
-[ -f ~/.git-prompt.sh ] && . ~/.git-prompt.sh
-
 # rbenv
 eval "$(rbenv init -)"
 
