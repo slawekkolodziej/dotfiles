@@ -31,7 +31,7 @@ check "TrueCrypt.app"
 
 # dev
 check "iTerm.app"
-check "Sublime Text 2.app"
+check "Sublime Text.app"
 check "SourceTree.app"
 check "metasploit"
 
@@ -42,10 +42,12 @@ check "Vagrant"
 
 # gaphic, movie & text editors
 check "Mou.app"
+check "LibreOffice.app"
 check "Adobe Photoshop CS5/Adobe Photoshop CS5.app"
 check "Adobe Illustrator CS5/Adobe Illustrator.app"
 check "Adobe Acrobat 9 Pro/Adobe Acrobat Pro.app"
 check "Adobe Lightroom 3.app"
+check "Pixelmator.app"
 
 # file sharing / backup / download
 check "Dropbox.app"
@@ -57,10 +59,10 @@ check "VLC.app"
 check "Spotify.app"
 
 # various
+check "Airmail.app"
 check "Slate.app"
 check "AppCleaner.app"
 check "Keka.app"
 check "ImageOptim.app"
-check "e-Deklaracje.app"
 
 unset check

@@ -16,6 +16,7 @@ brew install mercurial
 # images
 brew install pngnq
 brew install pngquant
+brew install imagemagick
 
 # ruby versioning
 brew install rbenv
@@ -62,7 +63,6 @@ installcask tor-browser
 
 # communication & collaboration
 installcask skype
-installcask hangouts
 installcask teamviewer
 
 # network & security
