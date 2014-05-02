@@ -1,9 +1,0 @@
-[submodule "apps/sublime3/Packages/GoSublime"]
-	path = apps/sublime3/Packages/GoSublime
-	url = https://github.com/DisposaBoy/GoSublime.git
-[submodule "apps/sublime3/Packages/SublimeLinter"]
-	path = apps/sublime3/Packages/SublimeLinter
-	url = https://github.com/SublimeLinter/SublimeLinter3.git
-[submodule "apps/sublime3/Packages/SublimeLinter-jshint"]
-	path = apps/sublime3/Packages/SublimeLinter-jshint
-	url = https://github.com/SublimeLinter/SublimeLinter-jshint.git
