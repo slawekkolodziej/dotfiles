@@ -14,6 +14,7 @@ brew install git
 brew install mercurial
 
 # images
+brew install formulas/pngout.rb
 brew install pngnq
 brew install pngquant
 brew install imagemagick
