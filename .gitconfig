@@ -13,6 +13,7 @@
 	st = status
 	ci = commit
 	me = !git log --author `git config user.email` --pretty=format:'%Cgreen%h%Creset %Cred%ad%Creset %s' --date=short --
+	cp = cherry-pick
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
