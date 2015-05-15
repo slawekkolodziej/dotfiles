@@ -336,3 +336,6 @@ rm -rf ~/Downloads/About\ Downloads.lpdf
 sudo defaults write /Library/Preferences/com.apple.Bluetooth.plist ControllerPowerState -int 0
 sudo launchctl unload /System/Library/LaunchDaemons/com.apple.blued.plist
 sudo launchctl load /System/Library/LaunchDaemons/com.apple.blued.plist
+
+# Disable Chrome print preview
+defaults write com.google.Chrome DisablePrintPreview -boolean true
