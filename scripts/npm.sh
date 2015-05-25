@@ -1,2 +1,2 @@
 #!/bin/bash
-npm install -g jshint cordova grunt-cli
+npm install -g jshint grunt-cli gulp-cli bower

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install homebrew and its packages
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew update
 brew upgrade
@@ -65,17 +65,16 @@ installcask tor-browser
 # communication & collaboration
 installcask skype
 installcask teamviewer
+installcask slack
 
 # network & security
 installcask sidestep
-installcask casks/network-connect.rb
 installcask truecrypt
 
 # dev
 installcask iterm2
 installcask sublime-text-3
 installcask sourcetree
-installcask p4merge
 
 # virtualization
 installcask casks/vmware-fusion.rb
@@ -84,11 +83,8 @@ installcask vagrant
 
 # text editors
 installcask mou
-installcask libreoffice
 
 # file sharing
-installcask bit-torrent-sync
-installcask utorrent
 
 # media players
 installcask vlc
@@ -96,14 +92,13 @@ installcask spotify
 
 # graphic
 installcask imageoptim
-installcask casks/lightroom.rb
 
 # utilities
 installcask slate
 installcask appcleaner
 installcask keka
-installcask todoist
 
 # various
 installcask adobe-air
+installcask adobe-creative-cloud
 installcask font-source-code-pro

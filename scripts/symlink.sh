@@ -17,7 +17,6 @@ function symlink() {
 
 function symlink_all() {
   symlink . ~
-  symlink ./apps/sublime3/ ~/Library/Application\ Support/Sublime\ Text\ 3/
 }
 
 
