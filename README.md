@@ -10,5 +10,5 @@ My dotfiles bundle and system provisioning scripts
 ## Installation
 
 ```
-git clone https://github.com/slawekkolodziej/dotfiles.git && cd dotfiles && source init.sh
+git clone https://github.com/slawekkolodziej/dotfiles.git .dotfiles && cd .dotfiles && source init.sh
 ```
