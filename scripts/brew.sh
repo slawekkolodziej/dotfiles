@@ -75,6 +75,7 @@ installcask truecrypt
 installcask iterm2
 installcask sublime-text-3
 installcask sourcetree
+installcask valentina-studio
 
 # virtualization
 installcask casks/vmware-fusion.rb
