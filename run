@@ -10,27 +10,24 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 pmset noidle &
 PMSETPID=$!
 
-printf "\nInitialize submodules\n"
-sudo git submodule update --init
-
 pushd ./scripts
-    printf "\nInstall homebrew and its packages\n"
-    . brew.sh
+    echo "Install homebrew and its packages"
+    . brew
 
-    printf "\nInstall ruby versions\n"
-    . rubies.sh
+    echo "Install ruby versions"
+    . rubies
 
-    printf "\nInstall node packages\n"
-    . npm.sh
+    echo "Install node packages"
+    . npm
 
-    printf "\nCheck OSX apps\n"
-    . check.sh
+    echo "Check OSX apps"
+    . check
 
-    printf "\nSet system defaults\n"
-    . osx.sh
+    echo "Set system defaults"
+    . osx
 
-    printf "\nSymlink dotfiles\n"
-    . symlink.sh
+    echo "Symlink dotfiles"
+    . symlink
 popd
 
 printf "\n\n---\n"

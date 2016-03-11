@@ -26,6 +26,7 @@ export LC_ALL=pl_PL.UTF-8
 # paths
 export GOPATH=$HOME/.golang
 export PATH=~/.composer/vendor/bin:$GOPATH/bin:/usr/local/bin:/usr/local/sbin:$HOME/.rbenv/bin:/usr/local/share/npm/bin:/usr/X11/bin:$PATH
+export BABEL_CACHE_PATH=/tmp/.babel.json
 
 # sublime shortcut
 sublime () { ~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $@; }

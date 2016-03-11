@@ -1,5 +1,13 @@
 #!/bin/bash
 
+DOTFILES=(
+  .gemrc
+  .npmrc
+  .git-completion.sh
+  .gitconfig
+  .gitignore_global
+)
+
 function symlink() {
   rsync \
     --exclude ".git/" \
@@ -11,7 +19,7 @@ function symlink() {
     --exclude "flags/" \
     --exclude "scripts/" \
     --exclude "README.md" \
-    --exclude "init.sh" \
+    --exclude "init" \
     -av --no-perms "$1" "$2"
 }
 
