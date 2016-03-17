@@ -7,6 +7,7 @@ DOTFILES="
   .npmrc
   .profile
   .slate
+  vimrc/.vimrc
 "
 
 for FILE in $DOTFILES
