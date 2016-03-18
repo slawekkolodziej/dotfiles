@@ -1,41 +1,33 @@
 #!/bin/bash
 
-# install homebrew and its packages
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Install homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 
 brew update
 brew upgrade
 
 brew tap homebrew/dupes
-brew install homebrew/dupes/grep
-
-# version control
-brew install git
-brew install mercurial
-
-# images
-brew install formulas/pngout.rb
-brew install pngnq
-brew install pngquant
-brew install imagemagick
-
-# ruby versioning
-brew install rbenv
-brew install ruby-build
-
-# nodejs
-brew install nodejs
-
-brew cleanup
-
-
-# install cask for native apps
 brew tap phinze/homebrew-cask
-brew install brew-cask
-
-# tap casks for versions & fonts
 brew tap caskroom/versions
 brew tap caskroom/fonts
+
+brew install  \
+  homebrew/dupes/grep \
+  formulas/pngout.rb
+
+brew install \
+  git \
+  pngnq \
+  pngquant \
+  imagemagick \
+  rbenv \
+  ruby-build \
+  nodejs \
+
+brew install brew-cask
+
+brew cleanup
 
 
 function installcask() {
