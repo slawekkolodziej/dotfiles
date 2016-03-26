@@ -1,0 +1,4 @@
+#!/bin/bash
+. scripts/functions
+
+install_ruby "2.2.3"

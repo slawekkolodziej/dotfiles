@@ -1,0 +1,15 @@
+#!/bin/bash
+. scripts/functions
+
+npm install -g \
+    bower \
+    chrome2calltree \
+    eslint \
+    grunt-cli \
+    gulp \
+    gulp-cli \
+    iron-node \
+    jscs \
+    jshint \
+    node-sass \
+    sass-lint

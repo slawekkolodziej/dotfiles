@@ -1,0 +1,37 @@
+#!/bin/bash
+. scripts/functions
+
+check_apps \
+	"1Password 6.app" \
+	"Adobe Lightroom" \
+	"Affinity Designer.app" \
+	"Affinity Photo.app" \
+	"Airmail 2.app" \
+	"AppCleaner.app" \
+	"Arduino.app" \
+	"Dropbox.app" \
+	"Firefox.app" \
+	"Fritzing.app" \
+	"Google Chrome Canary.app" \
+	"Google Chrome.app" \
+	"GPG Keychain.app" \
+	"ImageOptim.app" \
+	"iTerm.app" \
+	"Keka.app" \
+	"LibreOffice.app" \
+	"metasploit" \
+	"Mou.app" \
+	"Opera.app" \
+	"Pixelmator.app" \
+	"PureVPN.app" \
+	"Sidestep.app" \
+	"Skype.app" \
+	"Slate.app" \
+	"SourceTree.app" \
+	"Spotify.app" \
+	"Sublime Text.app" \
+	"TorBrowser.app" \
+	"TrueCrypt.app" \
+	"VirtualBox.app" \
+	"VLC.app" \
+	"VMware Fusion.app"

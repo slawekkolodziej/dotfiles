@@ -1,0 +1,37 @@
+#!/bin/bash
+function install_ruby() {
+  if [ -d "$HOME/.rbenv/versions/$1" ]; then
+	echo -e "\033[32m* Ruby $1 is already installed\033[39m"
+  else
+	rbenv install $1
+  fi
+}
+
+function install_apps() {
+	for app in "$@"
+	do
+		if [ -f $app ]; then
+			tmp=${app##*/};
+			app=${tmp%.[^.]*}
+		fi
+
+		if brew cask list | grep "^$app$" > /dev/null; then
+			echo "$app is already installed."
+		  else
+			brew cask install "$1"
+		  fi
+	done
+}
+
+function check_apps() {
+	for app in "$@"
+	do
+		echo "/Applications/$app"
+		if [ ! -d "/Applications/$app" ]; then
+			echo "$HOME/Applications/$app"
+			if [ ! -d "$HOME/Applications/$app" ]; then
+				echo -e "\033[41m* $app is missing\033[49m"
+			fi
+		fi
+	done
+}

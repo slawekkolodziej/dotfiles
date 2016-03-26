@@ -1,0 +1,46 @@
+#!/bin/bash
+. scripts/functions
+
+# Install homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Update, upgrade and tap more repositories
+brew update
+brew upgrade
+brew tap homebrew/dupes
+brew tap phinze/homebrew-cask
+brew tap caskroom/versions
+brew tap caskroom/fonts
+
+# Install whole bunch of stuff
+brew install \
+    aria2 \
+    autoconf \
+    automake \
+    brew-cask \
+    cmake \
+    docker \
+    docker-compose \
+    docker-machine \
+    flow \
+    formulas/pngout.rb \
+    gdal \
+    git \
+    go \
+    gpgtools \
+    grep \
+    hub \
+    imagemagick \
+    make \
+    node \
+    openssl \
+    pngnq \
+    pngquant \
+    python \
+    qt5 \
+    rbenv \
+    ruby-build \
+    sqlite
+
+# Finally - cleanp after installation
+brew cleanup

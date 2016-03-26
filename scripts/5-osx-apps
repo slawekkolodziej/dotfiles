@@ -1,0 +1,40 @@
+#!/bin/bash
+. scripts/functions
+
+install_apps \
+    adobe-air \
+    adobe-creative-cloud \
+    appcleaner \
+    calibre \
+    dropbox \
+    electrum \
+    firefox \
+    flux \
+    font-source-code-pro \
+    fritzing \
+    google-chrome \
+    google-chrome-canary \
+    imageoptim \
+    iterm2 \
+    java \
+    keka \
+    kindle \
+    libreoffice \
+    macvim \
+    mou \
+    opera \
+    sequel-pro \
+    sidestep \
+    skype \
+    slack \
+    slate \
+    sourcetree \
+    spotify \
+    sublime-text3 \
+    time-lapse-assembler \
+    torbrowser \
+    transmit \
+    vagrant \
+    valentina-studio \
+    virtualbox \
+    vlc

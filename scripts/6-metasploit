@@ -1,0 +1,4 @@
+#!/bin/bash
+. scripts/functions
+
+git clone git://github.com/rapid7/metasploit-framework ~/Applications/metasploit

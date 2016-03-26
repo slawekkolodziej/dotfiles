@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# Table of content:
+# 1. Symlink files
+# 2. Install system packages
+# 3. Install NPM packages
+# 4. Install Ruby versions
+# 5. Install OSX apps
+# 6. Install Metasploit
+# 7. Configure OSX
+
 # Ask for the administrator password upfront
 sudo -v
 
@@ -10,25 +19,15 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 pmset noidle &
 PMSETPID=$!
 
-pushd ./scripts
-    echo "Install homebrew and its packages"
-    . brew
-
-    echo "Install ruby versions"
-    . rubies
-
-    echo "Install node packages"
-    . npm
-
-    echo "Check OSX apps"
-    . check
-
-    echo "Set system defaults"
-    . osx
-
-    echo "Symlink dotfiles"
-    . symlink
-popd
+# Do the thing
+. scripts/1-symlink
+. scripts/2-system-packages
+. scripts/3-npm-packages
+. scripts/4-rubies
+. scripts/5-osx-apps
+. scripts/6-metasploit
+. scripts/7-osx-preferences
+. scripts/8-osx-check-apps
 
 printf "\n\n---\n"
 read -p "Everything's done, reboot now? (y/n) " -n 1
