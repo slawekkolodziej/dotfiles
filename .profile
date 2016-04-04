@@ -31,6 +31,12 @@ export BABEL_CACHE_PATH=/tmp/.babel.json
 # sublime shortcut
 sublime () { ~/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $@; }
 
+sshp () {
+    PROXY=$1
+    shift
+    ssh -o "ProxyCommand ssh -W %h:%p $PROXY" $@;
+}
+
 # aliases
 alias cd..="cd .."
 alias la="ls -la"
