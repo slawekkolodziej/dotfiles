@@ -44,6 +44,7 @@ alias sl="sublime"
 alias sl.="sublime ."
 alias gca="git add . && git commit -m $@"
 alias gp="git push"
+alias gu="git pull"
 
 # sh options
 shopt -s cdspell
