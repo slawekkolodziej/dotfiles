@@ -18,7 +18,7 @@ function install_apps() {
 		if brew cask list | grep "^$app$" > /dev/null; then
 			echo "$app is already installed."
 		  else
-			brew cask install "$1"
+			brew cask install "$app"
 		  fi
 	done
 }
