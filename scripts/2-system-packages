@@ -27,7 +27,6 @@ brew install \
     gdal \
     git \
     go \
-    gpgtools \
     grep \
     hub \
     imagemagick \
