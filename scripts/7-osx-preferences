@@ -5,8 +5,7 @@
 # General UI/UX
 ###############################################################################
 
-COMPUTER_NAME=$1
-: ${COMPUTER_NAME:="slawekk-air"}
+COMPUTER_NAME=$1 : ${COMPUTER_NAME:="slawekk-air"}
 
 # Set computer name (as done via System Preferences → Sharing)
 sudo scutil --set ComputerName $COMPUTER_NAME
